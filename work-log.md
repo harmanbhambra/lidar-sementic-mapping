@@ -82,3 +82,19 @@ Next Steps:
 
 * Continue semantic perception development using YOLO.
 
+## Day 5 (1st June 2026)
+
+Time: 3 hours
+
+Work:
+- Set up local development environment.
+- Installed YOLOv8 and dependencies.
+- Created and tested initial object detection script.
+
+Outcome:
+- Successfully ran YOLO object detection on sample images.
+- Ready to begin object detection on project data.
+
+Next Steps:
+- Run YOLO on RGB-D data.
+
