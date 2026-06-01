@@ -11,7 +11,7 @@ Outcome:
 - Clear understanding of LiDAR pipeline
 - Project environment prepared
 
-## Day 2 (Lab)
+## Day 2 lab (5th May 2026)
 Time:5 hours
 
 Work:
@@ -34,3 +34,32 @@ Next Steps:
 - Verify camera detection at system level
 - Properly install SDK
 - Test camera outside ROS before integration
+
+## Day 3 Lab (6th May, 2026)
+
+**Time:** 5 hours
+
+**Work:**
+
+* Configured RGB-D camera and ROS2 environment.
+* Resolved driver and dependency issues.
+* Successfully captured RGB and depth data.
+* Generated point cloud data from the RGB-D camera.
+* Used RTAB-Map for initial 3D environment reconstruction.
+
+**Challenges:**
+
+* Camera detection and driver configuration issues.
+* ROS2 package setup and integration.
+
+**Outcome:**
+
+* RGB-D camera successfully integrated and tested.
+* Obtained depth data, point clouds, and a working 3D reconstruction.
+
+**Next Steps:**
+
+* Organize recorded data.
+* Begin object detection using YOLO.
+* Combine object detections with depth information.
+
