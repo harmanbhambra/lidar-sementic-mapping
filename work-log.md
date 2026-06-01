@@ -63,3 +63,22 @@ Next Steps:
 * Begin object detection using YOLO.
 * Combine object detections with depth information.
 
+## Day 4(7th May 2026)
+
+**Time:** 3 hours
+
+**Work:**
+
+* Prepared mid-term presentation.
+* Reviewed project progress and key concepts.
+* Organized results and documentation.
+
+**Outcome:**
+
+* Completed presentation preparation.
+* Improved understanding of project workflow.
+
+**Next Steps:**
+
+* Continue semantic perception development using YOLO.
+
