@@ -4,3 +4,18 @@ yolov8n.pt
 __pycache__/
 bus.jpg
 *pt
+# Virtual environment
+semantic-v2/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Model weights
+models/
+
+# Generated results
+results/
+
+# Generated JSON
+semantic_map.json

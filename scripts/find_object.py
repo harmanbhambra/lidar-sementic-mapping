@@ -18,6 +18,5 @@ for frame, detections in data.items():
         )
 
         found = True
-
 if not found:
     print("Object not found.")
