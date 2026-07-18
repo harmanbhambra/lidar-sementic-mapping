@@ -2,6 +2,8 @@
 #It just finds objects
 from groundingdino.util.inference import(load_model, load_image, predict,)
 import os
+from torchvision.ops import box_convert
+import torch
 
 class GroundingDINODetector:
  
@@ -14,5 +16,8 @@ class GroundingDINODetector:
   #Detect objects in an image.
   image_source, image= load_image(image_path)
   boxes,logits, phrases=predict(model= self.model, image=image, caption=text_prompt, box_threshold=box_threshold, text_threshold=text_threshold,)
+  h,w, _= image_source.shape
+  boxes=boxes*torch.tensor([w,h,w,h])
+  boxes=box_convert(boxes=boxes, in_fmt='cxcywh', out_fmt='xyxy')
 
   return image_source, boxes, logits, phrases
