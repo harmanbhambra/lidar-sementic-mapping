@@ -152,7 +152,7 @@ Semantic Objects
 
 ## 👤 Author
 
-**Harman Kaur**
+**Harman Kaur Bhambra**
 
 B.Tech Computer and Communication Engineering  
 Manipal University Jaipur
