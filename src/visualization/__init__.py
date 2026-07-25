@@ -1,1 +1,1 @@
-from .visualizer import DetectionVisualizer
+from .visualizer import Visualizer

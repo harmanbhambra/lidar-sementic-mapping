@@ -6,11 +6,12 @@ class SAMSegmenter:
     """Segments detetced objects using Segment Anything."""
 
     def __init__(self, checkpoint_path, model_type='vit_h', device='cpu'):
-
-        self.sam=sam_model_registry[model_type](checkpoint=checkpoint_path)
+        self.sam = sam_model_registry[model_type](checkpoint=checkpoint_path)
         self.sam.to(device)
-        self.predictor= SamPredictor(self.sam)
-        print("SAM model loded successfully.")
+        self.predictor = SamPredictor(self.sam)
+        
+
+        print("SAM model loaded successfully.")
 
     def segment(self, image, boxes):
         """Generate segmentation masks for all detected boxes"""
