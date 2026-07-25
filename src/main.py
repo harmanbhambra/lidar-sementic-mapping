@@ -26,7 +26,7 @@ IMAGE_PATH=os.path.join(DATASET_PATH, "train","images")
 #EXPERIMENT_NAME= "open_vocab_test"
 #OUTPUT_FOLDER=os.path.join(PROJECT_ROOT, "results", EXPERIMENT_NAME)
 #os.makedirs(OUTPUT_FOLDER, exist_ok=True)
-EXPERIMENT_NAME2= "open_vocab_chair_bench"
+EXPERIMENT_NAME2= "indoor_semantic_25"
 OUTPUT_FOLDER=os.path.join(PROJECT_ROOT, "results", EXPERIMENT_NAME2 )
 os.makedirs(OUTPUT_FOLDER,exist_ok=True )
 
@@ -53,7 +53,7 @@ visualizer = Visualizer(alpha=0.5)
 print("After Visualiser")
 
 #Start a small batch to test the pipeline safely.
-test_images=image_files[:5]
+test_images=image_files[:25]
 print(f"Processing {len(test_images)} images:")
 
 #Process each image one at a time
@@ -73,7 +73,9 @@ for index, image_file in enumerate(test_images, start=1):
         #text_prompt="chair . table . person . laptop . door . window",
         #text_prompt=("backpack . bottle . bag . fire extinguisher ."
         #"notice board . bench . clock . television"),
-        text_prompt=("chair . bench . person . seating"),
+        text_prompt=( "person . chair . table . door . window . "
+    "backpack . bottle . laptop . bench . "
+    "fire extinguisher . notice board"),
         box_threshold=0.35,
         text_threshold=0.25
     )
