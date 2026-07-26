@@ -6,6 +6,7 @@ from visualization import Visualizer
 from segmentation import SAMSegmenter
 from semantic import DetectedObject , Scene
 
+
 print("=== START OF MAIN ===")
 #where the project is located
 PROJECT_ROOT=os.path.abspath(os.path.join(os.path.dirname(__file__),".."))
@@ -26,7 +27,7 @@ IMAGE_PATH=os.path.join(DATASET_PATH, "train","images")
 #EXPERIMENT_NAME= "open_vocab_test"
 #OUTPUT_FOLDER=os.path.join(PROJECT_ROOT, "results", EXPERIMENT_NAME)
 #os.makedirs(OUTPUT_FOLDER, exist_ok=True)
-EXPERIMENT_NAME2= "indoor_semantic_25"
+EXPERIMENT_NAME2= "QueryTest"
 OUTPUT_FOLDER=os.path.join(PROJECT_ROOT, "results", EXPERIMENT_NAME2 )
 os.makedirs(OUTPUT_FOLDER,exist_ok=True )
 
@@ -53,7 +54,7 @@ visualizer = Visualizer(alpha=0.5)
 print("After Visualiser")
 
 #Start a small batch to test the pipeline safely.
-test_images=image_files[:25]
+test_images=image_files[:2]
 print(f"Processing {len(test_images)} images:")
 
 #Process each image one at a time
@@ -109,6 +110,7 @@ for index, image_file in enumerate(test_images, start=1):
         objects=detected_objects
     )
 
+    
     print(f"\nTotal objects: {scene.count_objects()}")
     print(f"Labels in scene: {scene.get_labels()}")
 

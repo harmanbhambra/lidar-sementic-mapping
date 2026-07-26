@@ -77,7 +77,15 @@ class Scene:
             objects_data.append(object_data)
 
         #Create the complete semantic representation of thescene
-        scene_data={"object_count": self.count_objects(), "labels": self.get_labels(), "objects": objects_data}
+        height, width = self.image.shape[:2]
+
+        scene_data = {
+        "image_width": width,
+        "image_height": height,
+        "object_count": self.count_objects(),
+        "labels": self.get_labels(),
+        "objects": objects_data
+        }
 
         return scene_data
 
